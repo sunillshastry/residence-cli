@@ -14,14 +14,14 @@ private:
 	std::string name;
 
 	/** Social insurance number of the person : string */
-	std::string socialInsuranceNumber;
+	std::string social_insurance_number;
 
 public:
 	// Constructors
 	/** A default constructor that initialises the attributes to nullable values */
 	Person();
 	/** The main constructor that initialises the attributes as the argument values */
-	Person(std::string name, std::string socialInsuranceNumber);
+	Person(std::string name, std::string social_insurance_number);
 
 	// Accessor methods
 	/** Retrieves the name of the person */
@@ -33,7 +33,7 @@ public:
 	/** Sets the name of the person to a new string value */
 	void set_name(std::string name);
 	/** Sets the social insurance number of the person to a new string value */
-	void set_social_insurance_number(std::string socialInsuranceNumber);
+	void set_social_insurance_number(std::string social_insurance_number);
 
 	// Status method
 	/** Returns an entire person summary as a string suitable for printing/displaying purpose */

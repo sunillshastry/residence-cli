@@ -7,24 +7,24 @@
 Person::Person()
 {
 	this->name = "";
-	this->socialInsuranceNumber = "";
+	this->social_insurance_number = "";
 }
 
 /**
  * The main constructor that initialises the attributes as the argument values
  */
-Person::Person(std::string name, std::string socialInsuranceNumber)
+Person::Person(std::string name, std::string social_insurance_number)
 {
 	if (name == "" || name == " ")
 	{
 		throw -1;
 	}
-	if (socialInsuranceNumber == "" || socialInsuranceNumber == " ")
+	if (social_insurance_number == "" || social_insurance_number == " ")
 	{
 		throw -1;
 	}
 	this->name = name;
-	this->socialInsuranceNumber = socialInsuranceNumber;
+	this->social_insurance_number = social_insurance_number;
 }
 
 /**
@@ -40,7 +40,7 @@ std::string Person::get_name()
  */
 std::string Person::get_social_insurance_number()
 {
-	return this->socialInsuranceNumber;
+	return this->social_insurance_number;
 }
 
 /**
@@ -58,13 +58,13 @@ void Person::set_name(std::string name)
 
 /**
  * Sets the social insurance number of the person to the passed argument
- * @param socialInsuranceNumber The new social insurance number of the person
+ * @param social_insurance_number The new social insurance number of the person
  */
-void Person::set_social_insurance_number(std::string socialInsuranceNumber)
+void Person::set_social_insurance_number(std::string social_insurance_number)
 {
-	if (socialInsuranceNumber == "" || socialInsuranceNumber == " ")
+	if (social_insurance_number == "" || social_insurance_number == " ")
 	{
 		throw -1;
 	}
-	this->socialInsuranceNumber = socialInsuranceNumber;
+	this->social_insurance_number = social_insurance_number;
 }
