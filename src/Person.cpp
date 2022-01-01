@@ -15,6 +15,14 @@ Person::Person()
  */
 Person::Person(std::string name, std::string socialInsuranceNumber)
 {
+	if (name == "" || name == " ")
+	{
+		throw -1;
+	}
+	if (socialInsuranceNumber == "" || socialInsuranceNumber == " ")
+	{
+		throw -1;
+	}
 	this->name = name;
 	this->socialInsuranceNumber = socialInsuranceNumber;
 }
@@ -41,6 +49,10 @@ std::string Person::get_social_insurance_number()
  */
 void Person::set_name(std::string name)
 {
+	if (name == "" || name == " ")
+	{
+		throw -1;
+	}
 	this->name = name;
 }
 
@@ -50,5 +62,9 @@ void Person::set_name(std::string name)
  */
 void Person::set_social_insurance_number(std::string socialInsuranceNumber)
 {
+	if (socialInsuranceNumber == "" || socialInsuranceNumber == " ")
+	{
+		throw -1;
+	}
 	this->socialInsuranceNumber = socialInsuranceNumber;
 }
