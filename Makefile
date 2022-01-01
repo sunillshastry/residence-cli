@@ -4,11 +4,14 @@
 CPPVERSION = -std=c++11
 CPPFLAGS = -Wall -Wextra -Werror
 
-# Files
+# Source Code Files
 FILES_Person = Person.cpp Person.h
+
+# Unit test files
 TEST_Person = PersonTest.cpp Person.o
 
-vpath %.cpp src/ test/ util/
+# Custom path to search directories
+vpath %.cpp src/ tests/ util/
 vpath %.h include/
 
 PersonTest: $(TEST_Person)
