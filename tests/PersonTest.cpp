@@ -5,6 +5,13 @@ using std::cout;
 using std::endl;
 using std::string;
 
+/**
+ * Compares the given values and displays the according message.
+ * Tests only for strings values
+ * @param expected The user-expected value
+ * @param result The value returned from the function/method
+ * @param method The name of the method/function with the class name.
+ */
 void run_test(string expected, string result, string method = "(Method not available)")
 {
 	if (expected != result)
