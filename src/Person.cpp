@@ -68,3 +68,12 @@ void Person::set_social_insurance_number(std::string social_insurance_number)
 	}
 	this->social_insurance_number = social_insurance_number;
 }
+
+/**
+ * Returns an entire person summary as a string suitable for printing/displaying purpose
+ * @return A string consisting of all the details about a person in a printable format.
+ */
+std::string Person::to_string()
+{
+	return "Name: " + this->get_name() + "\nSocial Insurance Number: " + this->get_social_insurance_number();
+}
