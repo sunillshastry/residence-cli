@@ -29,6 +29,7 @@ Person::Person(std::string name, std::string social_insurance_number)
 
 /**
  * Retrieves the name of the person
+ * @return The name of the person
  */
 std::string Person::get_name()
 {
@@ -37,6 +38,7 @@ std::string Person::get_name()
 
 /**
  * Retrieves the social insurance number of the person
+ * @return The social insurance number of the person
  */
 std::string Person::get_social_insurance_number()
 {
@@ -67,4 +69,13 @@ void Person::set_social_insurance_number(std::string social_insurance_number)
 		throw -1;
 	}
 	this->social_insurance_number = social_insurance_number;
+}
+
+/**
+ * Returns an entire person summary as a string suitable for printing/displaying purpose
+ * @return A string consisting of all the details about a person in a printable format.
+ */
+std::string Person::to_string()
+{
+	return "Name: " + this->get_name() + "\nSocial Insurance Number: " + this->get_social_insurance_number() + "\n";
 }

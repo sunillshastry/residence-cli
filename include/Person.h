@@ -37,7 +37,7 @@ public:
 
 	// Status method
 	/** Returns an entire person summary as a string suitable for printing/displaying purpose */
-	void to_string();
+	std::string to_string();
 };
 
 #endif
