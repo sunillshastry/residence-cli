@@ -77,5 +77,5 @@ void Person::set_social_insurance_number(std::string social_insurance_number)
  */
 std::string Person::to_string()
 {
-	return "Name: " + this->get_name() + "\nSocial Insurance Number: " + this->get_social_insurance_number();
+	return "Name: " + this->get_name() + "\nSocial Insurance Number: " + this->get_social_insurance_number() + "\n";
 }

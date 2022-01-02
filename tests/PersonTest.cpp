@@ -58,7 +58,7 @@ int main()
 	run_test(expected, result, "Person.set_social_insurance_number()");
 
 	// TEST 5
-	expected = "Name: Ron\nSocial Insurance Number: ron100";
+	expected = "Name: Ron\nSocial Insurance Number: ron100\n";
 	result = person.to_string();
 	run_test(expected, result, "Person.to_string()");
 }
