@@ -29,6 +29,7 @@ Person::Person(std::string name, std::string social_insurance_number)
 
 /**
  * Retrieves the name of the person
+ * @return The name of the person
  */
 std::string Person::get_name()
 {
@@ -37,6 +38,7 @@ std::string Person::get_name()
 
 /**
  * Retrieves the social insurance number of the person
+ * @return The social insurance number of the person
  */
 std::string Person::get_social_insurance_number()
 {
