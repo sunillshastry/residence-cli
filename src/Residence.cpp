@@ -20,3 +20,8 @@ std::string Residence::get_name()
 {
 	return this->name;
 }
+
+int Residence::get_min_bed_label()
+{
+	return this->min_bed_label;
+}
