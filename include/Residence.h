@@ -23,10 +23,6 @@ private:
 	/** An array to represent the beds of the residence. Each bed is empty initially */
 	// Student residence_beds[];
 
-	// Utility Private methods for inner functionality
-	int label_to_index(int label);
-	int index_to_label(int index);
-
 public:
 	// Default and main constructor
 	/** Default constructor that creates the Residence object and initialises all values to nullable */
@@ -49,6 +45,12 @@ public:
 	int get_max_bed_label();
 
 	// Utility public methods
+	/** Converts label to equivalent array index value */
+	int label_to_index(int label);
+
+	/** Converts array index value to bed label equivalent */
+	int index_to_label(int index);
+
 	/** Checks if a bed is occupied or not (null value or not) */
 	bool is_occupied(int bed_label);
 
