@@ -47,3 +47,32 @@ bool Residence::is_occupied(int bed_label)
 	// return residence_beds[index] == 0 || residence_beds[index] == NULL;
 	return (index == 0 || index == NULL);
 }
+
+std::vector<int> Residence::available_beds()
+{
+	std::vector<int> free_beds;
+	return free_beds;
+}
+
+void Residence::free_bed(int bed_label)
+{
+	std::cout << "This is a dummy function. Need to free the bed if taken!!" << std::endl;
+}
+
+bool Residence::is_valid_label(int bed_label)
+{
+	if (bed_label > 0 && bed_label < 100)
+	{
+		return true;
+	}
+	else
+	{
+		return false;
+	}
+}
+
+std::string Residence::to_string()
+{
+	std::string result = "to_string result!";
+	return result;
+}
