@@ -47,3 +47,9 @@ bool Residence::is_occupied(int bed_label)
 	// return residence_beds[index] == 0 || residence_beds[index] == NULL;
 	return (index == 0 || index == NULL);
 }
+
+std::vector<int> Residence::available_beds()
+{
+	std::vector<int> free_beds;
+	return free_beds;
+}
