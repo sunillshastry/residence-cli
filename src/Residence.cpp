@@ -53,3 +53,8 @@ std::vector<int> Residence::available_beds()
 	std::vector<int> free_beds;
 	return free_beds;
 }
+
+void Residence::free_bed(int bed_label)
+{
+	std::cout << "This is a dummy function. Need to free the bed if taken!!" << std::endl;
+}
