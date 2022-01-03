@@ -58,3 +58,15 @@ void Residence::free_bed(int bed_label)
 {
 	std::cout << "This is a dummy function. Need to free the bed if taken!!" << std::endl;
 }
+
+bool Residence::is_valid_label(int bed_label)
+{
+	if (bed_label > 0 && bed_label < 100)
+	{
+		return true;
+	}
+	else
+	{
+		return false;
+	}
+}
