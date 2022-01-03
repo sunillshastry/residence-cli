@@ -35,3 +35,8 @@ int Residence::label_to_index(int label)
 {
 	return label - this->get_min_bed_label();
 }
+
+int Residence::index_to_label(int index)
+{
+	return index + this->get_min_bed_label();
+}
