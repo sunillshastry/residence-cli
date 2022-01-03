@@ -70,3 +70,9 @@ bool Residence::is_valid_label(int bed_label)
 		return false;
 	}
 }
+
+std::string Residence::to_string()
+{
+	std::string result = "to_string result!";
+	return result;
+}
