@@ -25,3 +25,8 @@ int Residence::get_min_bed_label()
 {
 	return this->min_bed_label;
 }
+
+int Residence::get_max_bed_label()
+{
+	return this->max_bed_label;
+}
