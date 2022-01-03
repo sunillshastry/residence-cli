@@ -30,3 +30,8 @@ int Residence::get_max_bed_label()
 {
 	return this->max_bed_label;
 }
+
+int Residence::label_to_index(int label)
+{
+	return label - this->get_min_bed_label();
+}
