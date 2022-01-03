@@ -40,3 +40,10 @@ int Residence::index_to_label(int index)
 {
 	return index + this->get_min_bed_label();
 }
+
+bool Residence::is_occupied(int bed_label)
+{
+	int index = this->label_to_index(bed_label);
+	// return residence_beds[index] == 0 || residence_beds[index] == NULL;
+	return (index == 0 || index == NULL);
+}
