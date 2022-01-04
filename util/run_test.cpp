@@ -63,3 +63,27 @@ void run_test(bool expected, bool result, std::string method = "(Method not avai
 		std::cout << "TEST PASSED!" << std::endl;
 	}
 }
+
+/**
+ * Compares two given floating values and displays the according message.
+ * Tests only for strings values
+ * @param expected The user-expected value (double/float)
+ * @param result The value returned from the function/method (double/float)
+ * @param method The name of the method/function with the class name. (string)
+ */
+void run_test(bool expected, bool result, std::string method = "(Method not available)")
+{
+	double diff = 0.01;
+	double greater = (expected >= result) ? expected : result;
+	double smaller = (expected >= result) ? result : expected;
+	if ((greater - smaller) > diff)
+	{
+		std::cout << "TEST FAILED!" << std::endl;
+		std::cout << "Expected: " << expected << ". Result: " << result << std::endl;
+		std::cout << "Bug detected in" << method << " method" << std::endl;
+	}
+	else
+	{
+		std::cout << "TEST PASSED!" << std::endl;
+	}
+}
