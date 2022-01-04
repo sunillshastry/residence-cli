@@ -15,27 +15,27 @@ int main()
 	// TEST 1
 	expected = "Harry";
 	result = person.get_name();
-	run_test(expected, result);
+	run_test(expected, result, "Person.get_name()");
 
 	// TEST 2
 	expected = "abc123";
 	result = person.get_social_insurance_number();
-	run_test(expected, result);
+	run_test(expected, result, "Person.get_social_insurance_number()");
 
 	// TEST 3
 	person.set_name("Ron");
 	expected = "Ron";
 	result = person.get_name();
-	run_test(expected, result);
+	run_test(expected, result, "Person.set_name()");
 
 	// TEST 4
 	person.set_social_insurance_number("ron100");
 	expected = "ron100";
 	result = person.get_social_insurance_number();
-	run_test(expected, result);
+	run_test(expected, result, "Person.set_social_insurance_number()");
 
 	// TEST 5
 	expected = "Name: Ron\nSocial Insurance Number: ron100\n";
 	result = person.to_string();
-	run_test(expected, result);
+	run_test(expected, result, "Person.to_string()");
 }

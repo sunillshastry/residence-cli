@@ -8,12 +8,13 @@
  * @param result The value returned from the function/method (string)
  * @param method The name of the method/function with the class name. (string)
  */
-void run_test(std::string expected, std::string result)
+void run_test(std::string expected, std::string result, std::string method)
 {
 	if (expected != result)
 	{
 		std::cout << "TEST FAILED!" << std::endl;
 		std::cout << "Expected: " << expected << ". Result: " << result << std::endl;
+		std::cout << "Bug found in the " << method << " method" << std::endl;
 	}
 	else
 	{
@@ -28,12 +29,13 @@ void run_test(std::string expected, std::string result)
  * @param result The value returned from the function/method (integer)
  * @param method The name of the method/function with the class name. (string)
  */
-void run_test(int expected, int result)
+void run_test(int expected, int result, std::string method)
 {
 	if (expected != result)
 	{
 		std::cout << "TEST FAILED!" << std::endl;
 		std::cout << "Expected: " << expected << ". Result: " << result << std::endl;
+		std::cout << "Bug found in the " << method << " method" << std::endl;
 	}
 	else
 	{
@@ -48,12 +50,13 @@ void run_test(int expected, int result)
  * @param result The value returned from the function/method (boolean)
  * @param method The name of the method/function with the class name. (string)
  */
-void run_test(bool expected, bool result)
+void run_test(bool expected, bool result, std::string method)
 {
 	if (expected != result)
 	{
 		std::cout << "TEST FAILED!" << std::endl;
 		std::cout << "Expected: " << expected << ". Result: " << result << std::endl;
+		std::cout << "Bug found in the " << method << " method" << std::endl;
 	}
 	else
 	{
@@ -68,7 +71,7 @@ void run_test(bool expected, bool result)
  * @param result The value returned from the function/method (double/float)
  * @param method The name of the method/function with the class name. (string)
  */
-void run_test(double expected, double result)
+void run_test(double expected, double result, std::string method)
 {
 	double diff = 0.01;
 	double greater = (expected >= result) ? expected : result;
@@ -77,6 +80,7 @@ void run_test(double expected, double result)
 	{
 		std::cout << "TEST FAILED!" << std::endl;
 		std::cout << "Expected: " << expected << ". Result: " << result << std::endl;
+		std::cout << "Bug found in the " << method << " method" << std::endl;
 	}
 	else
 	{
