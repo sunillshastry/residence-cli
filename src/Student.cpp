@@ -3,12 +3,22 @@
 #include "./../include/Student.h"
 #include "./../include/Person.h"
 
+/**
+ * The default constructor of the Student class, assigns all value to NULL or zero equivalent
+ */
 Student::Student() : Person()
 {
 	this->student_id = "";
 	this->bed_label = -1;
 }
 
+/**
+ * The main constructor of the Student class, assigns the argument to their equivalent attributes
+ * @param name The name of the Student
+ * @param social_insurance_number The social insurance number of the Student
+ * @param student_id The unique identity number of the Student
+ * @param bed_label The bed assigned to the student, initially a null value
+ */
 Student::Student(std::string name, std::string social_insurance_number, std::string student_id, int bed_label)
 	: Person(name, social_insurance_number)
 {
@@ -16,11 +26,19 @@ Student::Student(std::string name, std::string social_insurance_number, std::str
 	this->bed_label = -1;
 }
 
+/**
+ * Returns the Student's unique identity number
+ * @return The unique student id number of the particular Student object
+ */
 std::string Student::get_id()
 {
 	return this->student_id;
 }
 
+/**
+ * Returns the Student's bed label
+ * @return The bed label assigned to the Student in the residence
+ */
 int Student::get_bed_label()
 {
 	return this->bed_label;
@@ -57,11 +75,19 @@ std::vector<Manager> Student::get_manager_list()
 }
 */
 
+/**
+ * Sets a new bed label value to the Student
+ * @param bed_label The new bed label that is assigned as the student's bed
+ */
 void Student::set_bed_label(int bed_label)
 {
 	this->bed_label = bed_label;
 }
 
+/**
+ * Returns a summary of the Student object, includes name, id, SIN, manager list and bed label
+ * @return A summary of the Student object, representing all the essential information about the student.
+ */
 std::string Student::to_string()
 {
 	std::string result = "Name: " + this->name + "\n";
