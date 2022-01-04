@@ -1,6 +1,7 @@
 #include <iostream>
 #include <vector>
 #include "Person.h"
+// #include "Manager.h"
 
 #ifndef __STUDENT_H__
 #define __STUDENT_H__
