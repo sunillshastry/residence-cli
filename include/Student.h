@@ -16,7 +16,7 @@ private:
 
 public:
 	Student();
-	Student(std::string name, std::string social_insurance_number);
+	Student(std::string name, std::string social_insurance_number, std::string student_id, int bed_label);
 
 	int get_bed_label();
 	std::string get_id();
