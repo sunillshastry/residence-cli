@@ -12,3 +12,8 @@ BasicManager::BasicManager(std::string name, std::string social_insurance_number
 {
 	this->employee_id = employee_id;
 }
+
+std::string BasicManager::get_employee_id()
+{
+	return this->employee_id;
+}
