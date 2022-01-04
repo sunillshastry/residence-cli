@@ -25,3 +25,34 @@ int Student::get_bed_label()
 {
 	return this->bed_label;
 }
+
+/*
+void Student::add_manager(Manager manager)
+{
+	std::cout << "This method is supposed to add a new manager to the list of managers!" << std::endl;
+	std::cout << "! NEED TO IMPLEMENT THIS METHOD !" << std::endl;
+}
+*/
+
+/*
+void Student::remove_manager(std::string employee_id) {
+	std::cout << "This method is supposed to check and remove and existing manager in the list!" << std::endl;
+	std::cout << "! NEED TO IMPLEMENT THIS METHOD !" << std::endl;
+}
+*/
+
+/*
+bool Student::has_manager(std::string employee_id)
+{
+	std::cout << "This method is supposed to check if a manager is present in the list!" << std::endl;
+	std::cout << "! NEED TO IMPLEMENT THIS METHOD !" << std::endl;
+}
+*/
+
+/*
+std::vector<Manager> Student::get_manager_list()
+{
+	std::cout << "This method is supposed to return a list of all the managers associated to the student" << std::endl;
+	std::cout << "! NEED TO IMPLEMENT THIS METHOD !" << std::endl;
+}
+*/
