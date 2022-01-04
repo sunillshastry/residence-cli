@@ -15,3 +15,13 @@ Student::Student(std::string name, std::string social_insurance_number, std::str
 	this->student_id = student_id;
 	this->bed_label = -1;
 }
+
+std::string Student::get_id()
+{
+	return this->student_id;
+}
+
+int Student::get_bed_label()
+{
+	return this->bed_label;
+}
