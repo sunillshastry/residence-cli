@@ -61,3 +61,12 @@ void Student::set_bed_label(int bed_label)
 {
 	this->bed_label = bed_label;
 }
+
+std::string Student::to_string()
+{
+	std::string result = "Name: " + this->name + "\n";
+	result += "Social Insurance Number: " + this->social_insurance_number + "\n";
+	result += "Student ID: " + this->student_id + "\n";
+	result += "Residence Bed Label: " + std::to_string(this->bed_label) + "\n";
+	return result;
+}
