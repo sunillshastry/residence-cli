@@ -56,3 +56,8 @@ std::vector<Manager> Student::get_manager_list()
 	std::cout << "! NEED TO IMPLEMENT THIS METHOD !" << std::endl;
 }
 */
+
+void Student::set_bed_label(int bed_label)
+{
+	this->bed_label = bed_label;
+}
