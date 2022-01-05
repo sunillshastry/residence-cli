@@ -44,7 +44,7 @@ void Manager::add_student(Student student)
  */
 bool Manager::has_student(std::string student_id)
 {
-	for (int i = 0; i < this->students_list.size(); i++)
+	for (int i = 0; i < static_cast<int>(this->students_list.size()); i++)
 	{
 		std::string iterative_id = this->students_list.at(i).get_id();
 		if (student_id == iterative_id)
@@ -68,7 +68,7 @@ void Manager::remove_student(std::string student_id)
 	}
 	else
 	{
-		for (int i = 0; i < this->students_list.size(); i++)
+		for (int i = 0; i < static_cast<int>(this->students_list.size()); i++)
 		{
 			std::string iterative_id = this->students_list.at(i).get_id();
 			if (iterative_id == student_id)
@@ -95,9 +95,9 @@ std::string Manager::to_string()
 	result += "Social Insurance Number: " + this->get_social_insurance_number() + "\n";
 	result += "Employee ID: " + this->get_employee_id() + "\n";
 	result += "List of students: \n";
-	if (this->students_list.size() > 0)
+	if (static_cast<int>(this->students_list.size()) > 0)
 	{
-		for (int i = 0; i < this->students_list.size(); i++)
+		for (int i = 0; i < static_cast<int>(this->students_list.size()); i++)
 		{
 			std::string student_name = this->students_list.at(i).get_name();
 			result += std::to_string(i + 1) + ") " + student_name + "\n";

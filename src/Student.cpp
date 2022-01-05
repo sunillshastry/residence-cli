@@ -23,7 +23,7 @@ Student::Student(std::string name, std::string social_insurance_number, std::str
 	: Person(name, social_insurance_number)
 {
 	this->student_id = student_id;
-	this->bed_label = -1;
+	this->bed_label = bed_label;
 }
 
 /**
