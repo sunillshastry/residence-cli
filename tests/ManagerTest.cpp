@@ -25,5 +25,10 @@ int main()
 	result = manager.get_social_insurance_number();
 	run_test(expected, result, "Manger.get_social_insurance_number() : BasicManager");
 
+	// TEST 3
+	expected = "emp-139";
+	result = manager.get_employee_id();
+	run_test(expected, result, "Manager.get_employee_id() : BasicManager");
+
 	return 0;
 }
