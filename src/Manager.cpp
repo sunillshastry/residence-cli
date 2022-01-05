@@ -46,3 +46,25 @@ void Manager::remove_student(std::string student_id)
 		this->students_list.erase(this->students_list.begin() + index);
 	}
 }
+
+std::string Manager::to_string()
+{
+	std::string result = "Name: " + this->get_name() + "\n";
+	result += "Social Insurance Number: " + this->get_social_insurance_number() + "\n";
+	result += "Employee ID: " + this->get_employee_id() + "\n";
+	result += "List of students: \n";
+	if (this->students_list.size() > 0)
+	{
+		for (int i = 0; i < this->student_list.size(); i++)
+		{
+			std::string student_name = this->students_list.at(i).get_name();
+			result += std::to_string(i + 1) + ") " + student_name + "\n";
+		}
+	}
+	else
+	{
+		result += "No students associated\n";
+	}
+
+	return result;
+}
