@@ -26,3 +26,23 @@ bool Manager::has_student(std::string student_id)
 	}
 	return false;
 }
+
+void Manager::remove_student(std::string student_id)
+{
+	int index = -1;
+	if (this->has_student(student_id))
+	{
+		for (int i = 0; i < this->students_list.size(); i++)
+		{
+			std::string iterative_id = this->students_list.at(i).get_id();
+			if (iterative_id == student_id)
+			{
+				index = i;
+			}
+		}
+	}
+	if (index > -1)
+	{
+		this->students_list.erase(this->students_list.begin() + index);
+	}
+}
