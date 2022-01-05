@@ -55,7 +55,8 @@ void run_test(bool expected, bool result, std::string method)
 	if (expected != result)
 	{
 		std::cout << "TEST FAILED! ❌" << std::endl;
-		std::cout << "Expected: " << expected << ". Result: " << result << std::endl;
+		std::cout << "Expected: " << ((expected) ? "true" : "false")
+				  << ". Result: " << ((result) ? "true" : "false") << std::endl;
 		std::cout << "Bug found in the " << method << " method" << std::endl;
 	}
 	else
