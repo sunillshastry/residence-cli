@@ -10,5 +10,10 @@ using std::string;
 
 int main()
 {
+	string expected = "", result = "";
+
+	// Create a new Manager
+	Manager manager("Darth Vader", "33s476", "emp-139");
+
 	return 0;
 }
