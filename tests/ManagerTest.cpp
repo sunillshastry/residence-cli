@@ -45,5 +45,11 @@ int main()
 	expected = false;
 	result = manager.has_student(student2.get_id());
 	run_test(expected, result, "Manager.has_student()");
+
+	// TEST 6
+	manager.remove_student(student1.get_id());
+	expected = false;
+	result = manager.has_student(student1.get_id());
+	run_test(expected, result, "Manager.remove_student()");
 	return 0;
 }
