@@ -12,12 +12,17 @@ int main()
 	string expected = "", result = "";
 
 	// Create a BasicManager
-	BasicManager basic_manager("Hagrid", "gryffindor123", "gry555");
+	BasicManager basic_manager("Hagrid", "89054", "gryffindor123");
 
 	// TEST 1
 	expected = "Hagrid";
 	result = basic_manager.get_name();
 	run_test(expected, result, "BasicManager.get_name() : Person");
+
+	// TEST 2
+	expected = "89054";
+	result = basic_manager.get_social_insurance_number();
+	run_test(expected, result, "BasicManager.get_social_insurance_number() : Person");
 
 	return 0;
 }
