@@ -30,5 +30,15 @@ int main()
 	result = manager.get_employee_id();
 	run_test(expected, result, "Manager.get_employee_id() : BasicManager");
 
+	// TEST 4
+	// Testing the Student-Manager relationship methods
+	// Creating two Student objects for testing purpose!
+	Student student1("General Kenobi", "516ubc", "genken101", 0);
+	Student student2("Kylo Ren", "313ec", "kyren200", 1);
+
+	manager.add_student(student1);
+	expected = true;
+	result = manager.has_student(student1.get_id());
+	run_test(expected, result, "Manager.add_student() | Manager.has_student()");
 	return 0;
 }
