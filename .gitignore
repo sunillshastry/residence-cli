@@ -4,3 +4,4 @@ obj/
 build/
 *.o
 PersonTest
+BasicManagerTest
