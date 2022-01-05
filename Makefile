@@ -58,4 +58,4 @@ Person.o: $(FILES_Person)
 	g++ $(CPPVERSION) $(CPPFLAGS) -c $<
 
 clean:
-	rm *.o PersonTest BasicManagerTest
+	rm *.o PersonTest BasicManagerTest ManagerTest
