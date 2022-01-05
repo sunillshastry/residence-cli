@@ -51,5 +51,10 @@ int main()
 	expected = false;
 	result = manager.has_student(student1.get_id());
 	run_test(expected, result, "Manager.remove_student()");
+
+	// TEST 7
+	expected = "Name: Darth Vader\nSocial Insurance Number: 33s476\nEmployee ID: emp-139\nList of students: \nNo students associated\n";
+	result = manager.to_string();
+	run_test(expected, result, "Manager.to_string()");
 	return 0;
 }
