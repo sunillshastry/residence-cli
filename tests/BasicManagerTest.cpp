@@ -41,5 +41,10 @@ int main()
 	result = basic_manager.get_social_insurance_number();
 	run_test(expected, result, "BasicManager.set_social_insurance_number() : Person");
 
+	// TEST 6
+	expected = "Name: Albus Dumbledore\nSocial Insurance Number: 314587\nEmployee ID: gryffindor123\n";
+	result = basic_manager.to_string();
+	run_test(expected, result, "BasicManager.to_string()");
+
 	return 0;
 }
