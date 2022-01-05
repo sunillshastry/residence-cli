@@ -35,5 +35,11 @@ int main()
 	result = basic_manager.get_name();
 	run_test(expected, result, "BasicManager.set_name() : Person");
 
+	// TEST 5
+	basic_manager.set_social_insurance_number("314587");
+	expected = "314587";
+	result = basic_manager.get_social_insurance_number();
+	run_test(expected, result, "BasicManager.set_social_insurance_number() : Person");
+
 	return 0;
 }
