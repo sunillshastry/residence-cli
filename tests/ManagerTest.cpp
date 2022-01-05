@@ -19,5 +19,11 @@ int main()
 	expected = "Darth Vader";
 	result = manager.get_name();
 	run_test(expected, result, "Manager.get_name() : BasicManager");
+
+	// TEST 2
+	expected = "33s476";
+	result = manager.get_social_insurance_number();
+	run_test(expected, result, "Manger.get_social_insurance_number() : BasicManager");
+
 	return 0;
 }
