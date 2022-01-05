@@ -19,7 +19,7 @@ TEST_Manager = ManagerTest.cpp Manager.o BasicManager.o Person.o Student.o run_t
 # Custom path to search directories
 vpath %.cpp src/ tests/ util/
 vpath %.h include/ util/
-vpath *.o obj/
+vpath %.o obj/
 
 build:
 	make Person.o
