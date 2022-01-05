@@ -8,3 +8,8 @@ Manager::Manager() : BasicManager() {}
 
 Manager::Manager(std::string name, std::string social_insurance_number, std::string employee_id)
 	: BasicManager(name, social_insurance_number, employee_id) {}
+
+void Manager::add_student(Student student)
+{
+	this->students_list.push_back(student);
+}
