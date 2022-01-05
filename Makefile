@@ -1,4 +1,4 @@
-.PHONY: clean all
+.PHONY: clean build
 
 # Variables
 CPPVERSION = -std=c++11
@@ -20,7 +20,7 @@ TEST_Manager = ManagerTest.cpp Manager.o BasicManager.o Person.o Student.o run_t
 vpath %.cpp src/ tests/ util/
 vpath %.h include/ util/
 
-all:
+build:
 	make Person.o
 	make BasicManager.o
 	make Student.o
