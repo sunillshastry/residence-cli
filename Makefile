@@ -2,7 +2,7 @@
 
 # Variables
 CPPVERSION = -std=c++11
-CPPFLAGS = -Wall -Wextra #-Werror
+CPPFLAGS = -Wall -Wextra -Werror
 
 # Source Code Files
 FILES_Person = Person.cpp Person.h
