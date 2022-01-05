@@ -27,7 +27,14 @@ Manager::Manager(std::string name, std::string social_insurance_number, std::str
  */
 void Manager::add_student(Student student)
 {
-	this->students_list.push_back(student);
+	if (this->has_student(student.get_id()))
+	{
+		throw -1;
+	}
+	else
+	{
+		this->students_list.push_back(student);
+	}
 }
 
 /**
@@ -55,7 +62,11 @@ bool Manager::has_student(std::string student_id)
 void Manager::remove_student(std::string student_id)
 {
 	int index = -1;
-	if (this->has_student(student_id))
+	if (!this->has_student(student_id))
+	{
+		throw -1;
+	}
+	else
 	{
 		for (int i = 0; i < this->students_list.size(); i++)
 		{
@@ -63,6 +74,7 @@ void Manager::remove_student(std::string student_id)
 			if (iterative_id == student_id)
 			{
 				index = i;
+				break;
 			}
 		}
 	}
