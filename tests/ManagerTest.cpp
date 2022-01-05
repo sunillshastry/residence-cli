@@ -40,5 +40,10 @@ int main()
 	expected = true;
 	result = manager.has_student(student1.get_id());
 	run_test(expected, result, "Manager.add_student() | Manager.has_student()");
+
+	// TEST 5
+	expected = false;
+	result = manager.has_student(student2.get_id());
+	run_test(expected, result, "Manager.has_student()");
 	return 0;
 }
