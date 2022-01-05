@@ -12,7 +12,7 @@ void run_test(std::string expected, std::string result, std::string method)
 {
 	if (expected != result)
 	{
-		std::cout << "TEST FAILED!" << std::endl;
+		std::cout << "TEST FAILED! ❌" << std::endl;
 		std::cout << "Expected: " << expected << ". Result: " << result << std::endl;
 		std::cout << "Bug found in the " << method << " method" << std::endl;
 	}
@@ -33,7 +33,7 @@ void run_test(int expected, int result, std::string method)
 {
 	if (expected != result)
 	{
-		std::cout << "TEST FAILED!" << std::endl;
+		std::cout << "TEST FAILED! ❌" << std::endl;
 		std::cout << "Expected: " << expected << ". Result: " << result << std::endl;
 		std::cout << "Bug found in the " << method << " method" << std::endl;
 	}
@@ -54,7 +54,7 @@ void run_test(bool expected, bool result, std::string method)
 {
 	if (expected != result)
 	{
-		std::cout << "TEST FAILED!" << std::endl;
+		std::cout << "TEST FAILED! ❌" << std::endl;
 		std::cout << "Expected: " << expected << ". Result: " << result << std::endl;
 		std::cout << "Bug found in the " << method << " method" << std::endl;
 	}
@@ -78,7 +78,7 @@ void run_test(double expected, double result, std::string method)
 	double smaller = (expected >= result) ? result : expected;
 	if ((greater - smaller) > diff)
 	{
-		std::cout << "TEST FAILED!" << std::endl;
+		std::cout << "TEST FAILED! ❌" << std::endl;
 		std::cout << "Expected: " << expected << ". Result: " << result << std::endl;
 		std::cout << "Bug found in the " << method << " method" << std::endl;
 	}
