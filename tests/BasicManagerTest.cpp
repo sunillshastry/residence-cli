@@ -29,5 +29,11 @@ int main()
 	result = basic_manager.get_employee_id();
 	run_test(expected, result, "BasicManager.get_employee_id()");
 
+	// TEST 4
+	basic_manager.set_name("Albus Dumbledore");
+	expected = "Albus Dumbledore";
+	result = basic_manager.get_name();
+	run_test(expected, result, "BasicManager.set_name() : Person");
+
 	return 0;
 }
