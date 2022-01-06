@@ -25,7 +25,7 @@ private:
 	int bed_label;
 
 	/** A list of all the managers associated with the particular Student */
-	// vector<Manager> managers_list;
+	std::vector<Manager> managers_list;
 
 public:
 	// Constructors
@@ -44,19 +44,19 @@ public:
 
 	// Student-Manager relation methods
 	/** Adds a manager to the list of managers associated to the Student */
-	// void add_manager(Manager manager);
+	void add_manager(Manager manager);
 
 	/** Removes a manager from the list of managers associated, if present */
-	// void remove_manager(std::string employee_id);
+	void remove_manager(std::string employee_id);
 
 	/**
 	 * Checks if a manager is present in the list of managers, returns a boolean value to indicate
 	 * the result
 	 */
-	// bool has_manager(std::string employee_id);
+	bool has_manager(std::string employee_id);
 
 	/** Returns the entire list of managers consisting of all the managers associated */
-	// vector<Manager> get_manager_list();
+	vector<Manager> get_manager_list();
 
 	// Mutator methods
 	/** Sets a new bed label value to the Student */
