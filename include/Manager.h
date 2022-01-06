@@ -1,10 +1,12 @@
 #include <iostream>
 #include <vector>
-#include "BasicManager.h"
-#include "Student.h"
 
 #ifndef __MANAGER_H__
 #define __MANAGER_H__
+
+#include "Student.h"
+#include "Person.h"
+#include "BasicManager.h"
 
 /**
  * A class model of a Manager, a position slightly more advanced than the BasicManger.

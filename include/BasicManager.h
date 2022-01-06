@@ -1,8 +1,8 @@
 #include <iostream>
-#include "Person.h"
 
 #ifndef __BASICMANAGER_H__
 #define __BASICMANAGER_H__
+#include "Person.h"
 
 /**
  * A short and simple model of a basic manager consisting of basic details like name, SIN and
