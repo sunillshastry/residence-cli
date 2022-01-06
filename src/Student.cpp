@@ -1,6 +1,7 @@
 #include <iostream>
 #include <vector>
 #include "./../include/Student.h"
+#include "./../include/Manager.h"
 #include "./../include/Person.h"
 
 /**
@@ -44,13 +45,14 @@ int Student::get_bed_label()
 	return this->bed_label;
 }
 
-/*
+/**
+ * Adds a manager to the list of managers associated with the particular Student
+ * @param manager The manager object that needs to be added to the list
+ */
 void Student::add_manager(Manager manager)
 {
-	std::cout << "This method is supposed to add a new manager to the list of managers!" << std::endl;
-	std::cout << "! NEED TO IMPLEMENT THIS METHOD !" << std::endl;
+	this->managers_list.push_back(manager);
 }
-*/
 
 /*
 void Student::remove_manager(std::string employee_id) {
