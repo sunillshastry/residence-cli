@@ -7,8 +7,8 @@ CPPFLAGS = -Wall -Wextra -Werror
 # Source Code Files
 FILES_Person = Person.cpp Person.h
 FILES_BasicManager = BasicManager.cpp BasicManager.h
-FILES_Student = Student.cpp Student.h
-FILES_Manager = Manager.cpp Manager.h
+FILES_Student = Student.cpp Student.h Manager.cpp
+FILES_Manager = Manager.cpp Manager.h Student.cpp
 FILES_run_test = run_test.cpp run_test.h
 
 # Unit test files
@@ -82,6 +82,7 @@ move_exec:
 
 clean:
 	@echo "Removing all object files"
+	rm *.o
 	rm -rf obj/
 	@echo "Removing all executable files"
 	rm -rf build/

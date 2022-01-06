@@ -1,8 +1,6 @@
 #include <iostream>
 #include <vector>
 #include "./../include/Manager.h"
-#include "./../include/BasicManager.h"
-#include "./../include/Student.h"
 
 /**
  * The default constructor for the Manager class. Initialises all values to null or zero
@@ -27,7 +25,7 @@ Manager::Manager(std::string name, std::string social_insurance_number, std::str
  */
 void Manager::add_student(Student student)
 {
-	if (this->has_student(student.get_id()))
+	if (this->has_student(student.get_student_id()))
 	{
 		throw -1;
 	}
@@ -46,7 +44,7 @@ bool Manager::has_student(std::string student_id)
 {
 	for (int i = 0; i < static_cast<int>(this->students_list.size()); i++)
 	{
-		std::string iterative_id = this->students_list.at(i).get_id();
+		std::string iterative_id = this->students_list.at(i).get_student_id();
 		if (student_id == iterative_id)
 		{
 			return true;
@@ -70,7 +68,7 @@ void Manager::remove_student(std::string student_id)
 	{
 		for (int i = 0; i < static_cast<int>(this->students_list.size()); i++)
 		{
-			std::string iterative_id = this->students_list.at(i).get_id();
+			std::string iterative_id = this->students_list.at(i).get_student_id();
 			if (iterative_id == student_id)
 			{
 				index = i;
