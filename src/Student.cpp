@@ -27,6 +27,10 @@ Student::Student(std::string name, std::string social_insurance_number, std::str
 	this->bed_label = -1;
 }
 
+/**
+ * Returns the Student's bed label value. If bed is not assigned, the value returned is -1
+ * @return The student's bed label or -1 if unassigned.
+ */
 int Student::get_bed_label()
 {
 	return this->bed_label;
