@@ -54,6 +54,10 @@ void Student::set_bed_label(int bed_label)
 	this->bed_label = bed_label;
 }
 
+/**
+ * Creates a string summary of all the information about the student and returns it in a printable format.
+ * @return A string consisting of all the details related to a student
+ */
 std::string Student::to_string()
 {
 	std::string result = "Student Name: " + this->get_name() + "\n";
