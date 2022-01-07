@@ -1,7 +1,7 @@
 #include <iostream>
 #include "./../include/Manager.h"
-#include "./../include/BasicManager.h"
-#include "./../include/Student.h"
+// #include "./../include/BasicManager.h"
+// #include "./../include/Student.h"
 #include "./../util/run_test.h"
 
 using std::cout;
