@@ -6,6 +6,9 @@
 
 class Student : public Person
 {
+private:
+	int bed_label;
+	std::string student_id;
 };
 
 #endif
