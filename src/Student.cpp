@@ -14,3 +14,8 @@ Student::Student(std::string name, std::string social_insurance_number, std::str
 	this->student_id = student_id;
 	this->bed_label = -1;
 }
+
+int Student::get_bed_label()
+{
+	return this->bed_label;
+}
