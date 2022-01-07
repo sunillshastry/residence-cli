@@ -4,7 +4,7 @@
 #ifndef __MANAGER_H__
 #define __MANAGER_H__
 
-#include "Student.h"
+// #include "Student.h"
 #include "Person.h"
 #include "BasicManager.h"
 
@@ -16,7 +16,7 @@ class Manager : public BasicManager
 {
 private:
 	/** A list of all the student associated to a particular manager */
-	std::vector<Student> students_list;
+	// std::vector<Student> students_list;
 
 public:
 	// Constructors
@@ -28,13 +28,13 @@ public:
 
 	// Student-Manger relation methods
 	/** Adds a student to the list of students */
-	void add_student(Student student);
+	// void add_student(Student student);
 
 	/** Removes a student from the list of students associated to the manager, if present */
-	void remove_student(std::string student_id);
+	// void remove_student(std::string student_id);
 
 	/** Checks if a student is already present in the list of student associated to the manager */
-	bool has_student(std::string student_id);
+	// bool has_student(std::string student_id);
 
 	/** Returns a summary of the manager, along with the students associated */
 	std::string to_string();
