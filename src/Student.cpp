@@ -24,3 +24,8 @@ std::string Student::get_student_id()
 {
 	return this->student_id;
 }
+
+void Student::set_bed_label(int bed_label)
+{
+	this->bed_label = bed_label;
+}
