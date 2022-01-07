@@ -16,13 +16,14 @@ Manager::Manager() : BasicManager() {}
  * @param employee_id The unique employee identity number of the manager
  */
 Manager::Manager(std::string name, std::string social_insurance_number, std::string employee_id)
-	: BasicManager(name, social_insurance_number, employee_id) {}
+		: BasicManager(name, social_insurance_number, employee_id) {}
 
 /**
  * Adds a student to the list of all student associated to the manager
  * Adds a student only if the object is not present already
  * @param student The student (object) that is to be added
  */
+/*
 void Manager::add_student(Student student)
 {
 	if (this->has_student(student.get_student_id()))
@@ -34,12 +35,14 @@ void Manager::add_student(Student student)
 		this->students_list.push_back(student);
 	}
 }
+*/
 
 /**
  * Checks if a student is already present in the list of student associated to the manager
  * @param student_id The unique student identity number
  * @return true if the student is present, else false
  */
+/*
 bool Manager::has_student(std::string student_id)
 {
 	for (int i = 0; i < static_cast<int>(this->students_list.size()); i++)
@@ -52,11 +55,13 @@ bool Manager::has_student(std::string student_id)
 	}
 	return false;
 }
+*/
 
 /**
  * Removes a student from the list of students associated to the manager, if present
  * @param student_id The unique student identity number
  */
+/*
 void Manager::remove_student(std::string student_id)
 {
 	int index = -1;
@@ -81,6 +86,7 @@ void Manager::remove_student(std::string student_id)
 		this->students_list.erase(this->students_list.begin() + index);
 	}
 }
+*/
 
 /**
  * Returns a summary of the manager, along with the students associated
@@ -92,7 +98,8 @@ std::string Manager::to_string()
 	std::string result = "Name: " + this->get_name() + "\n";
 	result += "Social Insurance Number: " + this->get_social_insurance_number() + "\n";
 	result += "Employee ID: " + this->get_employee_id() + "\n";
-	result += "List of students: \n";
+	// result += "List of students: \n";
+	/*
 	if (static_cast<int>(this->students_list.size()) > 0)
 	{
 		for (int i = 0; i < static_cast<int>(this->students_list.size()); i++)
@@ -105,6 +112,7 @@ std::string Manager::to_string()
 	{
 		result += "No students associated\n";
 	}
+	*/
 
 	return result;
 }
