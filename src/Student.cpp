@@ -45,6 +45,10 @@ std::string Student::get_student_id()
 	return this->student_id;
 }
 
+/**
+ * Sets the Student's bed label value to a new value. Does not validate if the new bed label is correct.
+ * @param bed_label The new bed label that needs to be set as the Student's bed number.
+ */
 void Student::set_bed_label(int bed_label)
 {
 	this->bed_label = bed_label;
