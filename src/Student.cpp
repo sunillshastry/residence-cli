@@ -19,3 +19,8 @@ int Student::get_bed_label()
 {
 	return this->bed_label;
 }
+
+std::string Student::get_student_id()
+{
+	return this->student_id;
+}
