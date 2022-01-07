@@ -36,6 +36,10 @@ int Student::get_bed_label()
 	return this->bed_label;
 }
 
+/**
+ * Returns the Student's unique identity number.
+ * @return A string. The unique identity number of the specific student
+ */
 std::string Student::get_student_id()
 {
 	return this->student_id;
