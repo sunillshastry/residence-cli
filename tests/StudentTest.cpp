@@ -32,5 +32,12 @@ int main()
 	expected = -1;
 	result = student.get_bed_label();
 	run_test(expected, result, "Student.get_bed_label()");
+
+	// TEST 5
+	student.set_bed_label(15);
+	expected = 15;
+	result = student.get_bed_label();
+	run_test(expected, result, "Student.get_bed_label() & Student.set_bed_label()");
+
 	return 0;
 }
