@@ -7,14 +7,15 @@ CPPFLAGS = -Wall -Wextra -Werror
 # Source Code Files
 FILES_Person = Person.cpp Person.h
 FILES_BasicManager = BasicManager.cpp BasicManager.h
-FILES_Student = Student.cpp Student.h Manager.cpp
-FILES_Manager = Manager.cpp Manager.h Student.cpp
+FILES_Student = Student.cpp Student.h
+FILES_Manager = Manager.cpp Manager.h
 FILES_run_test = run_test.cpp run_test.h
 
 # Unit test files
 TEST_Person = PersonTest.cpp Person.o run_test.o
 TEST_BasicManager = BasicManagerTest.cpp BasicManager.o Person.o run_test.o
-TEST_Manager = ManagerTest.cpp Manager.o BasicManager.o Person.o Student.o run_test.o
+TEST_Manager = ManagerTest.cpp Manager.o BasicManager.o Person.o run_test.o
+TEST_Student = StudentTest.cpp Student.o Person.o run_test.o
 
 # Custom path to search directories
 vpath %.cpp src/ tests/ util/
@@ -30,59 +31,66 @@ build:
 	make PersonTest
 	make BasicManagerTest
 	make ManagerTest
+	make StudentTest
 	make move_o
 	make move_exec
 
-ManagerTest: $(TEST_Manager)
-	@echo "Building test executable file for Manager"
+StudentTest: $(TEST_Student)
+	@echo "\nBuilding test executable file for Student"
 	g++ $(CPPVERSION) $(CPPFLAGS) -c $<
-	g++ Manager.o BasicManager.o Student.o Person.o run_test.o ManagerTest.o -o $@
+	g++ Student.o Person.o run_test.o StudentTest.o -o $@
+
+ManagerTest: $(TEST_Manager)
+	@echo "\nBuilding test executable file for Manager"
+	g++ $(CPPVERSION) $(CPPFLAGS) -c $<
+	g++ Manager.o BasicManager.o Person.o run_test.o ManagerTest.o -o $@
 
 BasicManagerTest: $(TEST_BasicManager)
-	@echo "Building test executable file for BasicManager"
+	@echo "\nBuilding test executable file for BasicManager"
 	g++ $(CPPVERSION) $(CPPFLAGS) -c $<
 	g++ BasicManager.o Person.o run_test.o BasicManagerTest.o -o $@
 
 PersonTest: $(TEST_Person)
-	@echo "Building test executable file for Person"
+	@echo "\nBuilding test executable file for Person"
 	g++ $(CPPVERSION) $(CPPFLAGS) -c $<
 	g++ Person.o run_test.o PersonTest.o -o $@
 
 run_test.o: $(FILES_run_test)
-	@echo "Building all the test utility files"
+	@echo "\nBuilding all the test utility files"
 	g++ $(CPPVERSION) $(CPPFLAGS) -c $<
 
 Manager.o: $(FILES_Manager)
-	@echo "Compiling Manager.cpp to its object file..."
+	@echo "\nCompiling Manager.cpp to its object file..."
 	g++ $(CPPVERSION) $(CPPFLAGS) -c $<
 
 Student.o: $(FILES_Student)
-	@echo "Compiling Student.cpp to its object file..."
+	@echo "\nCompiling Student.cpp to its object file..."
 	g++ $(CPPVERSION) $(CPPFLAGS) -c $<
 
 BasicManager.o: $(FILES_BasicManager)
-	@echo "Compiling BasicManager.cpp to its object file..."
+	@echo "\nCompiling BasicManager.cpp to its object file..."
 	g++ $(CPPVERSION) $(CPPFLAGS) -c $<
 
 Person.o: $(FILES_Person)
-	@echo "Compiling Person.cpp to its object file..."
+	@echo "\nCompiling Person.cpp to its object file..."
 	g++ $(CPPVERSION) $(CPPFLAGS) -c $<
 
 move_o:
-	@echo "Moving all object files to 'obj' folder"
+	@echo "\nMoving all object files to 'obj' folder"
 	mkdir obj/
 	mv *.o ./obj/
 
 move_exec:
-	@echo "Moving all executables to 'build' folder"
+	@echo "\nMoving all executables to 'build' folder"
 	mkdir build
 	mv ./PersonTest ./build/
 	mv ./BasicManagerTest ./build/
 	mv ./ManagerTest ./build/
+	mv ./StudentTest ./build/
 
 clean:
-	@echo "Removing all object files"
+	@echo "\nRemoving all object files"
 	rm *.o
 	rm -rf obj/
-	@echo "Removing all executable files"
+	@echo "\nRemoving all executable files"
 	rm -rf build/
