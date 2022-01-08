@@ -62,6 +62,7 @@ std::string Student::to_string()
 {
 	std::string result = "Student Name: " + this->get_name() + "\n";
 	result += "Social Insurance Number: " + this->get_social_insurance_number() + "\n";
+	result += "Bed Label: " + ((this->bed_label == -1) ? "Unassigned" : std::to_string(this->bed_label)) + "\n";
 	result += "Student ID: " + this->get_student_id() + "\n";
 	return result;
 }
