@@ -90,7 +90,6 @@ move_exec:
 
 clean:
 	@echo "\nRemoving all object files"
-	rm *.o
 	rm -rf obj/
 	@echo "\nRemoving all executable files"
 	rm -rf build/
