@@ -8,6 +8,9 @@ using std::string;
 
 int main()
 {
+	string expected = "", result = "";
 
+	// Create a new Student object
+	Student student("Neville Longbottom", "78934", "gry562");
 	return 0;
 }
