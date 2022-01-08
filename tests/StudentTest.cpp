@@ -17,5 +17,10 @@ int main()
 	expected = "Neville Longbottom";
 	result = student.get_name();
 	run_test(expected, result, "Student.get_name() : Person");
+
+	// TEST 2
+	expected = "78934";
+	result = student.get_social_insurance_number();
+	run_test(expected, result, "Student.get_social_insurance_number() : Person");
 	return 0;
 }
