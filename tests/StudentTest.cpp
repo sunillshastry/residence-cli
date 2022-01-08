@@ -39,5 +39,10 @@ int main()
 	result = student.get_bed_label();
 	run_test(expected, result, "Student.get_bed_label() & Student.set_bed_label()");
 
+	// TEST 6
+	expected = "Student Name: Neville Longbottom\nSocial Insurance Number: 78934\nBed Label: 15\nStudent ID: gry562\n";
+	result = student.to_string();
+	run_test(expected, result, "Student.to_string()");
+
 	return 0;
 }
