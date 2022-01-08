@@ -27,5 +27,10 @@ int main()
 	expected = "gry562";
 	result = student.get_student_id();
 	run_test(expected, result, "Student.get_student_id()");
+
+	// TEST 4
+	expected = -1;
+	result = student.get_bed_label();
+	run_test(expected, result, "Student.get_bed_label()");
 	return 0;
 }
