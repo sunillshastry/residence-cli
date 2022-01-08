@@ -1,4 +1,4 @@
-.PHONY: clean build move_exec move_o
+.PHONY: clean build move_exec move_o rebuild
 
 # Variables
 CPPVERSION = -std=c++11
@@ -34,6 +34,10 @@ build:
 	make StudentTest
 	make move_o
 	make move_exec
+
+rebuild:
+	make clean
+	make build
 
 StudentTest: $(TEST_Student)
 	@echo "\nBuilding test executable file for Student"
