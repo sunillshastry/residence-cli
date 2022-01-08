@@ -12,5 +12,10 @@ int main()
 
 	// Create a new Student object
 	Student student("Neville Longbottom", "78934", "gry562");
+
+	// TEST 1
+	expected = "Neville Longbottom";
+	result = student.get_name();
+	run_test(expected, result, "Student.get_name() : Person");
 	return 0;
 }
