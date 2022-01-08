@@ -22,5 +22,10 @@ int main()
 	expected = "78934";
 	result = student.get_social_insurance_number();
 	run_test(expected, result, "Student.get_social_insurance_number() : Person");
+
+	// TEST 3
+	expected = "gry562";
+	result = student.get_student_id();
+	run_test(expected, result, "Student.get_student_id()");
 	return 0;
 }
