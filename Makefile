@@ -9,12 +9,14 @@ FILES_Person = Person.cpp Person.h
 FILES_BasicManager = BasicManager.cpp BasicManager.h
 FILES_Student = Student.cpp Student.h
 FILES_Manager = Manager.cpp Manager.h
+FILES_Consultant = Consultant.cpp Consultant.h
 FILES_run_test = run_test.cpp run_test.h
 
 # Unit test files
 TEST_Person = PersonTest.cpp Person.o run_test.o
 TEST_BasicManager = BasicManagerTest.cpp BasicManager.o Person.o run_test.o
 TEST_Manager = ManagerTest.cpp Manager.o BasicManager.o Person.o run_test.o
+TEST_Consultant = ConsultantTest.cpp Consultant.o Manager.o BasicManager.o Person.o run_test.o
 TEST_Student = StudentTest.cpp Student.o Person.o run_test.o
 
 # Custom path to search directories
@@ -27,17 +29,24 @@ build:
 	make BasicManager.o
 	make Student.o
 	make Manager.o
+	make Consultant.o
 	make run_test.o
 	make PersonTest
 	make BasicManagerTest
 	make ManagerTest
 	make StudentTest
+	make ConsultantTest
 	make move_o
 	make move_exec
 
 rebuild:
 	make clean
 	make build
+
+ConsultantTest: $(TEST_Consultant)
+	@echo "\nBuilding test executable file for Consultant"
+	g++ $(CPPVERSION) $(CPPFLAGS) -c $<
+	g++ Consultant.o Manager.o BasicManager.o Person.o run_test.o ConsultantTest.o -o $@
 
 StudentTest: $(TEST_Student)
 	@echo "\nBuilding test executable file for Student"
@@ -61,6 +70,10 @@ PersonTest: $(TEST_Person)
 
 run_test.o: $(FILES_run_test)
 	@echo "\nBuilding all the test utility files"
+	g++ $(CPPVERSION) $(CPPFLAGS) -c $<
+
+Consultant.o: $(FILES_Consultant)
+	@echo "\nCompiling Consultant.cpp to its object file..."
 	g++ $(CPPVERSION) $(CPPFLAGS) -c $<
 
 Manager.o: $(FILES_Manager)
@@ -91,6 +104,7 @@ move_exec:
 	mv ./BasicManagerTest ./build/
 	mv ./ManagerTest ./build/
 	mv ./StudentTest ./build/
+	mv ./ConsultantTest ./build/
 
 clean:
 	@echo "\nRemoving all object files"
