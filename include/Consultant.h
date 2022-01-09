@@ -19,6 +19,6 @@ public:
 
 	/** Returns a string representation of the Consultant including all the details of the consultant */
 	std::string to_string();
-}
+};
 
 #endif
