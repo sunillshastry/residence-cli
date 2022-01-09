@@ -22,5 +22,10 @@ int main()
 	expected = "89356";
 	result = consultant.get_social_insurance_number();
 	run_test(expected, result, "Consultant.get_social_insurance_number() : Manager");
+
+	// TEST 3
+	expected = "kings-landing-450";
+	result = consultant.get_employee_id();
+	run_test(expected, result, "Consultant.get_employee_id() : Manager");
 	return 0;
 }
