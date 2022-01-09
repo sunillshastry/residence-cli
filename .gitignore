@@ -6,3 +6,5 @@ build/
 PersonTest
 BasicManagerTest
 ManagerTest
+StudentTest
+ConsultantTest
