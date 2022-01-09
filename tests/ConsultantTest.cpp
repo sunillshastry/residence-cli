@@ -27,5 +27,10 @@ int main()
 	expected = "kings-landing-450";
 	result = consultant.get_employee_id();
 	run_test(expected, result, "Consultant.get_employee_id() : Manager");
+
+	// TEST 4
+	expected = "Name: Samwell Tarly\nSocial Insurance Number: 89356\nEmployee ID: kings-landing-450\nConsultant: Yes\n";
+	result = consultant.to_string();
+	run_test(expected, result, "Consultant.to_string()");
 	return 0;
 }
