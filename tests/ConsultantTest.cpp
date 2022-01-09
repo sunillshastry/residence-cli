@@ -17,5 +17,10 @@ int main()
 	expected = "Samwell Tarly";
 	result = consultant.get_name();
 	run_test(expected, result, "Consultant.get_name() : Manager");
+
+	// TEST 2
+	expected = "89356";
+	result = consultant.get_social_insurance_number();
+	run_test(expected, result, "Consultant.get_social_insurance_number() : Manager");
 	return 0;
 }
