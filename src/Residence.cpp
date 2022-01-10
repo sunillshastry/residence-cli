@@ -1,6 +1,7 @@
 #include <iostream>
 #include <vector>
 #include "./../include/Residence.h"
+#include "./../include/Student.h"
 
 Residence::Residence()
 {
@@ -14,6 +15,7 @@ Residence::Residence(std::string name, int min_bed_label, int max_bed_label)
 	this->name = name;
 	this->min_bed_label = min_bed_label;
 	this->max_bed_label = max_bed_label;
+	// this->residence_beds = new Student[max_bed_label - min_bed_label + 1];
 }
 
 std::string Residence::get_name()
