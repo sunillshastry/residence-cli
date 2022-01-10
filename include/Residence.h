@@ -3,6 +3,7 @@
 
 #ifndef __RESIDENCE_H__
 #define __RESIDENCE_H__
+#include "Student.h"
 
 /**
  * A residence class managing all the aspects of the residence information needed for a residence
@@ -20,8 +21,8 @@ private:
 	/** The external label of the last bed of the residence */
 	int max_bed_label;
 
-	/** An array to represent the beds of the residence. Each bed is empty initially */
-	// Student residence_beds[];
+	/** An pointer-array to represent the beds of the residence. Each bed is empty initially */
+	// Student *residence_beds;
 
 public:
 	// Default and main constructor
@@ -55,10 +56,10 @@ public:
 	bool is_occupied(int bed_label);
 
 	/** Retrieves a student from a particular bed if it is taken and  valid */
-	// Student get_student(int bed_label);
+	Student get_student(int bed_label);
 
 	/** Assigns a student to a bed if the bed is empty */
-	// void assign_student(Student student, int bed_label);
+	void assign_student(Student student, int bed_label);
 
 	/** Returns a vector list of all the empty beds available at the residence */
 	std::vector<int> available_beds();
