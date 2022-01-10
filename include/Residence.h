@@ -22,7 +22,7 @@ private:
 	int max_bed_label;
 
 	/** An pointer-array to represent the beds of the residence. Each bed is empty initially */
-	Student *residence_beds;
+	// Student *residence_beds;
 
 public:
 	// Default and main constructor
